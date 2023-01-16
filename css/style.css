@@ -18,6 +18,14 @@
     font-family: 'Roboto Mono', monospace;
 }
 
+section{
+    overflow-x: hidden;
+}
+
+.movie-section{
+    padding-left: 0;
+}
+
 body, .dropdown-menu, .dropdown-item, .modal-content, .close-modal, .progress, .footer{
     background-color: var(--secondary);
 }
@@ -36,7 +44,7 @@ body, .dropdown-menu, .dropdown-item, .modal-content, .close-modal, .progress, .
     color: var(--flame);
 }
 
-#scrollBtn, .leaderboard, .round, .btn-group-vertical{
+#scrollBtn, .leaderboard, .round, .btn-group-vertical, #winnerTitle{
     background-color: var(--flame);
 }
 
@@ -75,7 +83,7 @@ body, .dropdown-menu, .dropdown-item, .modal-content, .close-modal, .progress, .
     padding-left: 1rem;
 }
 
-.display-movies, #refresh, .well, .btn-group-vertical{
+.display-movies, #refresh, .well, .btn-group-vertical, p{
     margin: 0;
     padding: 0;
 }
@@ -88,7 +96,7 @@ body, .dropdown-menu, .dropdown-item, .modal-content, .close-modal, .progress, .
     font-size: 1rem;
 }
 
-.display-movies h2, .close-modal, .movie-title, .round-number-label, .btn-group-vertical{
+.display-movies h2, .close-modal, .movie-title, .round-number-label, .btn-group-vertical, p{
     color: var(--pale);
 }
 
@@ -357,6 +365,10 @@ iframe{
 .btn-check:checked+.btn{
     color:var(--rubyred);
     border-color: var(--pale);
+}
+
+#winnerTitle{
+    margin: 1rem;
 }
 
 .round-number-label{

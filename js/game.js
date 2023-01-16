@@ -66,7 +66,7 @@ function remove(){
             data: {last : newMovieArray[0].id} 
         }); 
         $("#game-modal").modal("show");
-        location.replace("index.php");
+        winner();
     }
 }
 
@@ -114,3 +114,13 @@ function updateRounds(){
         $("#game-rounds").text("Round of " + rounds + "  " + (count+1) + " / " + (rounds/2)); 
     }
 }
+
+function winner(){
+    $("#movieSelections").text("Out of " + localStorage.getItem("rounds") + " random selections");
+    $("#winnerMovie").attr("src", newMovieArray[0].img_dir);
+    $("#winnerTitle").text(newMovieArray[0].movie_name);
+}
+
+$('#game-modal').on('hidden.bs.modal', function () {
+    location.replace("index.php");
+  });

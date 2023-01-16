@@ -54,17 +54,21 @@
     <div class="modal fade" id="game-modal" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title">Placeholder</h3>
+                    <div class="modal-header d-flex flex-row-reverse">
                         <button type="button" class="close-modal btn btn-secondary" data-bs-dismiss="modal">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-
+                        <h3 class="modal-title text-center">Winner</h3>
+                        <div class="text-center">
+                            <img src="#" id="winnerMovie" alt="Movie Img" class="img-responsive rounded mx-auto">
+                            <p id="movieSelections"></p>
+                            <h4 id="winnerTitle"></h4>
+                            <p>was your winner!!</p>
+                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-primary">Start Playing!</button>
                     </div>
                 </div>
             </div>
