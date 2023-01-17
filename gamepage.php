@@ -16,7 +16,7 @@
         <button class="home col-sm-1 btn">Leaderboard</button>
     </header>
     <h1 class="text-center"><div class="round d-block text-center" id="game-rounds"></div></h1>
-    <div class="row justify-content-center container-fluid">
+    <div class="row d-flex justify-content-around container-fluid">
         <?php
             require 'connection.php';
             $query = "SELECT * FROM movies";
@@ -31,7 +31,7 @@
         ?>
         <section class="section movie-section text-center d-block col-sm-6">
             <div class="movie-title" id="left-movie-title"></div>
-            <div class="movie-image-container">
+            <div class="movie-yt-container">
                 <!-- <img src="#" id="left-movie" alt="Movie Img" class="game-img img-responsive d-lg-block rounded mx-auto"> -->
                 <iframe src="#" id="left-movie"></iframe>
             </div>
@@ -41,7 +41,7 @@
         </section>
         <section class="section movie-section text-center align-middle d-block col-sm-6" id="section">
             <div class="movie-title" id="right-movie-title"></div>
-            <div class="movie-image-container">
+            <div class="movie-yt-container">
                 <!-- <img src="#" id="right-movie" alt="Movie Img" class="game-img img-responsive rounded mx-auto"> -->
                 <iframe src="#" id="right-movie"></iframe>
             </div>
@@ -52,27 +52,27 @@
     </div>
     <footer class="footer text-center">Made by Daniel Cojocea</footer>
     <div class="modal fade" id="game-modal" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header d-flex flex-row-reverse">
-                        <button type="button" class="close-modal btn btn-secondary" data-bs-dismiss="modal">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex flex-row-reverse">
+                    <button type="button" class="close-modal btn btn-secondary" data-bs-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="modal-title text-center">Winner</h3>
+                    <div class="text-center">
+                        <img src="#" id="winnerMovie" alt="Movie Img" class="img-responsive rounded mx-auto">
+                        <p id="movieSelections"></p>
+                        <h4 id="winnerTitle"></h4>
+                        <p>was your winner!!</p>
                     </div>
-                    <div class="modal-body">
-                        <h3 class="modal-title text-center">Winner</h3>
-                        <div class="text-center">
-                            <img src="#" id="winnerMovie" alt="Movie Img" class="img-responsive rounded mx-auto">
-                            <p id="movieSelections"></p>
-                            <h4 id="winnerTitle"></h4>
-                            <p>was your winner!!</p>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                    </div>
+                </div>
+                <div class="modal-footer">
                 </div>
             </div>
         </div>
+    </div>
         
         <script type="text/javascript">
             const movies = <?php echo json_encode($movies_array); ?>;

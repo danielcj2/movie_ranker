@@ -30,9 +30,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-auto"></div>
+            <div class="col-sm-auto"></div>
             <button type="button" class="btn play-game col-sm-3" data-bs-toggle="modal" data-bs-target="#myModal">Play</button>
-            <div id="refresh" class="row">
+            <div class="d-flex justify-content-around flex-wrap" id="refresh" class="row">
                 <?php
                     //Connection
                     require 'connection.php';

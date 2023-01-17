@@ -121,6 +121,8 @@ function winner(){
     $("#winnerTitle").text(newMovieArray[0].movie_name);
 }
 
-$('#game-modal').on('hidden.bs.modal', function () {
+$("#game-modal").on('hidden.bs.modal', function () {
     location.replace("index.php");
   });
+
+$(".home").click(function(){location.replace("index.php");});

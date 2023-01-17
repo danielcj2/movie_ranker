@@ -22,11 +22,7 @@ section{
     overflow-x: hidden;
 }
 
-.movie-section{
-    padding-left: 0;
-}
-
-body, .dropdown-menu, .dropdown-item, .modal-content, .close-modal, .progress, .footer{
+body, .dropdown-menu, .dropdown-item, .modal-content, .close-modal, .progress{
     background-color: var(--secondary);
 }
 
@@ -105,7 +101,7 @@ body, .dropdown-menu, .dropdown-item, .modal-content, .close-modal, .progress, .
     position: relative;
 }
 
-.leaderboard-list, .arrow, .rank, .well, .choose-movie, .round-number-label, .header{
+.leaderboard-list, .arrow, .rank, .well, .choose-movie, .round-number-label, .header, .footer{
     background-color: var(--primary);
 }
 
@@ -164,7 +160,7 @@ body, .dropdown-menu, .dropdown-item, .modal-content, .close-modal, .progress, .
 }
 
 .rank{
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     min-width: 2rem;
     height: 2rem;
     font-size: 1.5rem;
@@ -196,6 +192,7 @@ body, .dropdown-menu, .dropdown-item, .modal-content, .close-modal, .progress, .
 
 .container-fluid{
     margin: 0;
+    margin-bottom: 3rem;
 }
 
 /* sections */
@@ -205,13 +202,13 @@ body, .dropdown-menu, .dropdown-item, .modal-content, .close-modal, .progress, .
 
 /* movie items */
 .movie-container{
-    justify-content: flex-start;
     margin-bottom: 2rem;
+    width: 385px;
 }
 
 /* movie backdrop */
 .well{
-    width: 400px;
+    width: 100%;
     height: auto;
 }
 
@@ -278,9 +275,22 @@ img{
     min-width: 120px;
 }
 
+.movie-yt-container{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
 iframe{
-    height: 550px;
-    width: 850px;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
 }
 
 .movie-img{
@@ -292,6 +302,14 @@ iframe{
     font-weight: 700;
     font-size: 1.5rem;
     white-space: nowrap;
+    margin-bottom: 1rem;
+}
+
+.movie-section{
+    padding: 0;
+    height: 600px;
+    width: 800px;
+    
 }
 
 .game-img{
@@ -360,6 +378,7 @@ iframe{
 
 .close-modal:hover{
     color: white;
+    background-color: var(--secondary);
 }
 
 .btn-check:checked+.btn{
@@ -416,4 +435,42 @@ body::-webkit-scrollbar{
 
 body::-webkit-scrollbar-thumb{
     background-color: var(--pale);
+}
+
+@media only screen and (max-width: 500px){
+    .movie-yt-container{
+        height: 320px;
+        width: 100%;
+    }
+
+    html{
+        font-size: 14px;
+    }
+
+    .movie-section .movie-title{
+        font-size: 1.2rem;
+        white-space: normal;
+    }
+
+    .choose-movie{
+        margin-bottom: 2rem;
+    }
+
+    .round{
+        margin-bottom: 0;
+    }
+
+    .home{
+        color: var(--pale);
+        border-color: var(--flame);
+        padding: 0.2rem;
+    }
+}
+
+@media only screen and (max-width: 1650px){
+    .movie-section{
+        width: 1000px;
+        height: auto;
+        margin-bottom: 2rem;
+    }
 }
